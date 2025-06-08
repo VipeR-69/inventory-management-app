@@ -9,7 +9,7 @@ const mongoose = require("mongoose")
 
 app = express();
 
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 3000;
 
 mongoose.connect(process.env.MONGO_URL).then(() => console.log("MongoDB connected")).catch(err => console.log("MongoDB Error", err))
 
