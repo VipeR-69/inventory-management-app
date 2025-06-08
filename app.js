@@ -9,9 +9,9 @@ const mongoose = require("mongoose")
 
 app = express();
 
-const PORT = process.env.PORT || 8000;
+const PORT = secrets.PORT || 8000;
 
-mongoose.connect(process.env.MONGO_URL).then(() => console.log("MongoDB connected")).catch(err => console.log("MongoDB Error", err))
+mongoose.connect(secrets.MONGO_URL).then(() => console.log("MongoDB connected")).catch(err => console.log("MongoDB Error", err))
 
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'ejs')
